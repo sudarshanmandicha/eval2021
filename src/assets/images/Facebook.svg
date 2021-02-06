@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>883FBDF9-AE6E-4E48-B30C-766E2F786E1A</title>
+    <defs>
+        <path d="M1494.00277,45 C1482.4034,45 1473,54.4033979 1473,66.0027657 C1473,77.5966021 1482.4034,87 1494.00277,87 C1505.5966,87 1515,77.5966021 1515,66.0027657 C1515,54.4033979 1505.5966,45 1494.00277,45 L1494.00277,45 Z M1504.21928,74.8806796 C1504.21928,75.5001976 1503.91505,76.1589885 1503.30107,76.1589885 L1498.13473,76.1589885 L1498.13473,68.4150138 L1500.76215,68.4150138 L1501.16041,65.0961675 L1498.13473,65.0961675 L1498.13473,63.1153694 C1498.13473,62.2303437 1498.37258,61.7773212 1499.6448,61.7773212 L1501.45358,61.7773212 L1501.45358,58.8838404 C1500.90043,58.8451205 1500.04307,58.7621493 1498.92019,58.7621493 C1496.58593,58.7621493 1494.81588,60.1892533 1494.81588,62.8111418 L1494.81588,65.0961675 L1492.05018,65.0961675 L1492.05018,68.4150138 L1494.81588,68.4150138 L1494.81588,76.1589885 L1485.23548,76.1589885 C1484.61596,76.1589885 1484.3062,75.5001976 1484.3062,74.8806796 L1484.3062,56.8150928 C1484.3062,56.1955749 1484.61596,55.6927697 1485.23548,55.6927697 L1503.30107,55.6927697 C1503.91505,55.6927697 1504.21928,56.1955749 1504.21928,56.8150928 L1504.21928,74.8806796 L1504.21928,74.8806796 Z" id="path-1"></path>
+        <filter x="-16.7%" y="-11.9%" width="133.3%" height="133.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.123880026 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Web-News" transform="translate(-1469.000000, -2362.000000)">
+            <g id="Facebook" transform="translate(0.000000, 2319.000000)">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

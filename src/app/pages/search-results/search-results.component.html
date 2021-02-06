@@ -1,0 +1,44 @@
+<div class="row container-home">
+
+    <div class="row m-0 mt-5" *ngIf="searchResults.length">
+        <div class="p-o mb-4">
+            <h2 class="col-sm-12 p-0 home-headers">Search Results
+            </h2>
+        </div>
+    </div>
+
+    <div style="height: 90vh; margin:0 auto" *ngIf="!searchResults.length">
+        <h2>No Results Found!</h2>
+    </div>
+
+    <div class="row p-0 m-0" style="min-height: 50vh;">
+
+        <div class="card border-0" *ngFor="let item of searchResults">
+            <div class="row no-gutters">
+                <div class="col-auto all-news-img-container">
+                    <img [src]="item.urlToImage" style='height: 100%; width: 100%;' class="img-fluid" alt="asd">
+                </div>
+                <div class="col">
+                    <div class="card-block px-3 py-3">
+                        <h4 class="all-news-tile-title cursor-pointer w-75" (click)="onNewsSelect(item)">{{item.title}}
+                        </h4>
+                        <p class="all-news-tile-desc mt-3">{{item.description}}</p>
+                    </div>
+
+                    <div class="row container ml-1">
+                        <div class="chip">
+                            {{item.source.name}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-dark">
+                <hr>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="details-container">
+    <h1 class="header">{{selectedNews?.title}} </h1>
+    <div class="chip"> {{selectedNews?.source.name}} </div>
+    <div class="news-content">
+        <img class="news-image" [src]="selectedNews?.urlToImage" />
+
+        {{selectedNews?.description}}
+    </div>
+</div>
+
+<div class="row recommended">
+    <div class="p-o mb-4">
+        <h2 class="col-sm-12 p-0">Don't miss to read
+        </h2>
+    </div>
+
+    <div class="col-sm-12 p-0 m-0">
+        <div class="container p-0 m-0">
+
+            <div class="card border-0" *ngFor="let item of allNews | slice:0:2; let i=index">
+                <div class="row no-gutters">
+                    <div class="col-auto all-news-img-container">
+                        <img [src]="item.urlToImage"
+                            style='height: 100%; width: 100%;' class="img-fluid" alt="asd">
+                    </div>
+                    <div class="col">
+                        <div class="card-block px-3 py-3">
+                            <h4 class="card-title font-bold">{{item.title}}</h4>
+                            <p class="card-text description-text">{{item.description}}</p>
+                        </div>
+
+                        <div class="row container ml-1">
+                            <div class="chip">
+                                {{item?.source.name}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-dark" *ngIf="i !=1">
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

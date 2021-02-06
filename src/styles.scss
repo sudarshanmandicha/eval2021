@@ -1,0 +1,26 @@
+@font-face {
+    font-display: swap;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: normal;
+    src: url(assets/font/static/Inter-Medium.ttf);
+}
+
+body {
+    font-family: Inter;
+    margin: 0;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.indicator-holder{
+    height: 100vh;
+    margin: auto 0;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+}

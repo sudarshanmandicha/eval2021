@@ -1,0 +1,38 @@
+<div style="height: 100vh;" *ngIf="isLoading">
+    <div class="indicator-holder">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</div>
+
+<div class="row header">
+    <div class="col-sm-4 p-3">
+        <img src="assets/images/header_logo.svg" [routerLink]="['home']" />
+    </div>
+    <div class="d-flex justify-content-end col-sm-8">
+        <div class="col-sm-2 pt-4">
+            <div class="home-button col-sm-2 home-text" (click)="onTabClick('home')">
+                <span>Home</span>
+            </div>
+            <div class="line" *ngIf="activeTab === 'home'">
+            </div>
+        </div>
+        <div class="col-sm-2 pt-4">
+            <div class="bookmark-button col-sm-2 home-text" (click)="onTabClick('bookmarks')">
+                <span>Bookmarks</span>
+            </div>
+            <div class="line-bookmark" *ngIf="activeTab === 'bookmarks'">
+            </div>
+        </div>
+        <div class="col-sm-4 d-flex pt-3">
+            <img src="assets/images/search.svg" alt="back" class="image-pos">
+            <div class="search-wrapper d-flex flex-grow-1">
+                <input type="text" name="search" id="menu-search" class="search-text" placeholder="Search"
+                    [(ngModel)]="searchText" (keyup.enter)="searchNews()">
+            </div>
+
+        </div>
+    </div>
+
+</div>

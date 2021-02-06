@@ -1,0 +1,81 @@
+<div style="height: 100vh;" *ngIf="isLoading">
+    <div class="indicator-holder">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</div>
+
+<div class="row container-home">
+    <div class="p-o mb-4">
+        <h2 class="col-sm-12 p-0 home-headers">Top News
+        </h2>
+    </div>
+
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="card border-0">
+                <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                        <img class="" [src]="topNews?.urlToImage" width="529px" height="297px" alt="News Card image">
+                    </div>
+                    <div class="card-body pr-5">
+                        <h4 class="top-news-tile-title cursor-pointer" (click)="onNewsSelect(topNews)">
+                            {{topNews?.title}}</h4>
+                        <p class="top-news-tile-desc">{{topNews?.description}}</p>
+                        <div class="row container mt-2">
+                            <div class="chip">
+                                {{topNews?.source.name}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-0 mt-5">
+        <div class="p-o mb-4">
+            <h2 class="col-sm-12 p-0 home-headers">All News
+            </h2>
+        </div>
+    </div>
+
+    <div class="row p-0 m-0" infinite-scroll [infiniteScrollDistance]="scrollDistance"
+        [infiniteScrollUpDistance]="scrollUpDistance" [infiniteScrollThrottle]="throttle" (scrolled)="onScrollDown()">
+
+        <div class="card border-0" *ngFor="let item of allNews;">
+            <div class="row no-gutters">
+                <div class="col-auto all-news-img-container">
+                    <img [src]="item.urlToImage" style='height: 100%; width: 100%;' class="img-fluid" alt="asd">
+                </div>
+                <div class="col">
+                    <div class="card-block px-3 py-3">
+                        <h4 class="all-news-tile-title cursor-pointer w-75" (click)="onNewsSelect(item)">{{item.title}}
+                        </h4>
+                        <div class="bookmark-container w-25">
+                            <div class="holder" (click)="onClickBookMark(item)">
+                                <img *ngIf="checkWhetherBookmarked(item);else notBookMarked"
+                                    src="assets/images/blue-bookmark.svg" />
+                                <ng-template #notBookMarked>
+                                    <img src="assets/images/small-bookmark.svg" />
+                                </ng-template>
+                            </div>
+                        </div>
+                        <p class="all-news-tile-desc mt-3">{{item.description}}</p>
+                    </div>
+
+                    <div class="row container ml-1">
+                        <div class="chip">
+                            {{item.source.name}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-dark">
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
