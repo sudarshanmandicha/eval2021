@@ -82,7 +82,7 @@ export class NewsHomeComponent implements OnInit {
     }
   }
 
-  onScrollDown(ev) {
+  onScrollDown() {
     this.page++;
     this.getAllNews();
   }
